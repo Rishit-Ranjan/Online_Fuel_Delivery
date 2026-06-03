@@ -60,11 +60,18 @@ public class UserFragment extends Fragment {
     }
 
     private void setupOrdersList() {
-        // For now, just observe orders to show/hide empty state
+        OrderAdapter adapter = new OrderAdapter();
+        binding.recyclerViewOrders.setLayoutManager(new androidx.recyclerview.widget.LinearLayoutManager(getContext()));
+        binding.recyclerViewOrders.setAdapter(adapter);
+
         viewModel.getOrders().observe(getViewLifecycleOwner(), orders -> {
             boolean hasOrders = orders != null && !orders.isEmpty();
             binding.recyclerViewOrders.setVisibility(hasOrders ? View.VISIBLE : View.GONE);
             binding.emptyOrdersState.setVisibility(hasOrders ? View.GONE : View.VISIBLE);
+            
+            if (hasOrders) {
+                adapter.setOrders(orders);
+            }
         });
     }
 }
