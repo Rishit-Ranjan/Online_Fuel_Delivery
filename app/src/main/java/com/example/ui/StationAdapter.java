@@ -45,9 +45,14 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.ViewHold
                 (station.isPetrolAvailable() || station.isDieselAvailable()) ? 0xFF2E7D32 : 0xFFC62828);
 
         holder.binding.btnOrderGas.setOnClickListener(v -> {
-            if (v.getContext() instanceof androidx.fragment.app.FragmentActivity) {
-                androidx.fragment.app.FragmentActivity activity = (androidx.fragment.app.FragmentActivity) v.getContext();
-                OrderDialogFragment.newInstance(station).show(activity.getSupportFragmentManager(), "OrderDialog");
+            android.content.Context context = v.getContext();
+            while (context instanceof android.content.ContextWrapper) {
+                if (context instanceof androidx.fragment.app.FragmentActivity) {
+                    androidx.fragment.app.FragmentActivity activity = (androidx.fragment.app.FragmentActivity) context;
+                    OrderDialogFragment.newInstance(station).show(activity.getSupportFragmentManager(), "OrderDialog");
+                    return;
+                }
+                context = ((android.content.ContextWrapper) context).getBaseContext();
             }
         });
     }
