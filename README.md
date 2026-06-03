@@ -29,7 +29,11 @@ A comprehensive Android application simulating a multirole fuel delivery ecosyst
 *   **Lifecycle**: LiveData & ViewModel for reactive UI updates.
 
 ## 📸 Screenshots
-*(Add your screenshots here to showcase the sleek Dark UI and Role Switcher)*
+![Screenshot_20260603_191347.png](../../OneDrive/Pictures/Screenshots%201/Screenshot_20260603_191347.png)
+
+![Screenshot_20260603_191539.png](../../OneDrive/Pictures/Screenshots%201/Screenshot_20260603_191539.png)
+
+![Screenshot_20260603_191406.png](../../OneDrive/Pictures/Screenshots%201/Screenshot_20260603_191406.png)
 
 ## 🚦 Getting Started
 
