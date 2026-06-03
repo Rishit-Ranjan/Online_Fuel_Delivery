@@ -4,254 +4,269 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="24dp"
     android:background="@drawable/bottom_sheet_bg_dark">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Request Fuel Delivery"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/white" />
-
-    <TextView
-        android:id="@+id/tv_dialog_station_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Station: BP Green Energy Hub"
-        android:textColor="@color/order_blue"
-        android:textSize="14sp"
-        android:layout_marginBottom="16dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select Fuel Type:"
-        android:textSize="12sp"
-        android:textColor="@color/dark_on_surface_variant"
-        android:layout_marginBottom="8dp" />
-
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/btn_select_petrol"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:cardCornerRadius="24dp"
-            app:cardBackgroundColor="@color/dark_sheet_surface"
-            app:strokeWidth="0dp"
-            android:layout_marginEnd="8dp">
-            <TextView
-                android:id="@+id/tv_petrol_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:gravity="center"
-                android:text="Petrol\n($1.42/L)"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/btn_select_diesel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:cardCornerRadius="24dp"
-            app:cardBackgroundColor="@color/diesel_active"
-            app:strokeWidth="0dp"
-            android:layout_marginStart="8dp">
-            <TextView
-                android:id="@+id/tv_diesel_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:gravity="center"
-                android:text="Diesel\n($1.36/L)"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-        </com.google.android.material.card.MaterialCardView>
-    </LinearLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Volume (Liters)"
-        android:textColorHint="@color/dark_on_surface_variant"
-        app:hintTextColor="@color/white"
-        app:boxStrokeColor="@color/white"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_marginBottom="12dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_volume"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:textColor="@color/white"
-            android:text="25" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="24dp">
-        <Button android:id="@+id/btn_10l" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="10L" android:textColor="@color/white" app:strokeColor="@color/white" android:layout_marginEnd="4dp" />
-        <Button android:id="@+id/btn_20l" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="20L" android:textColor="@color/white" app:strokeColor="@color/white" android:layout_marginHorizontal="4dp" />
-        <Button android:id="@+id/btn_50l" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="50L" android:textColor="@color/white" app:strokeColor="@color/white" android:layout_marginHorizontal="4dp" />
-        <Button android:id="@+id/btn_100l" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="100L" android:textColor="@color/white" app:strokeColor="@color/white" android:layout_marginStart="4dp" />
-    </LinearLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Your Name"
-        android:textColorHint="@color/dark_on_surface_variant"
-        app:hintTextColor="@color/white"
-        app:boxStrokeColor="@color/white"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_marginBottom="12dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="Rohit Ranjan" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Phone Number"
-        android:textColorHint="@color/dark_on_surface_variant"
-        app:hintTextColor="@color/white"
-        app:boxStrokeColor="@color/white"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_marginBottom="12dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="+91 98765 43210" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Delivery Destination Address"
-        android:textColorHint="@color/dark_on_surface_variant"
-        app:hintTextColor="@color/white"
-        app:boxStrokeColor="@color/white"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_marginBottom="16dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="78 Kings Plaza, Sector 12, BLR" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select Delivery Payment:"
-        android:textSize="12sp"
-        android:textColor="@color/dark_on_surface_variant"
-        android:layout_marginBottom="8dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="24dp">
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/btn_pay_cash"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/white"
-            app:strokeWidth="0dp"
-            android:layout_marginEnd="8dp">
-            <TextView
-                android:id="@+id/tv_pay_cash_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:gravity="center"
-                android:text="Cash on\nDelivery"
-                android:textColor="@color/dark_sheet_bg"
-                android:textStyle="bold"
-                android:textSize="12sp" />
-        </com.google.android.material.card.MaterialCardView>
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/btn_pay_wallet"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/dark_sheet_surface"
-            app:strokeWidth="1dp"
-            app:strokeColor="@color/white"
-            android:layout_marginStart="8dp">
-            <TextView
-                android:id="@+id/tv_pay_wallet_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:gravity="center"
-                android:text="Digital Wallet"
-                android:textColor="@color/dark_on_surface_variant"
-                android:textSize="12sp" />
-        </com.google.android.material.card.MaterialCardView>
-    </LinearLayout>
-
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="#3A3A3C"
-        app:cardCornerRadius="12dp"
-        app:strokeWidth="0dp"
-        android:layout_marginBottom="24dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
-            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rate:" android:textColor="@color/dark_on_surface_variant" android:textSize="12sp" />
-                <TextView android:id="@+id/tv_summary_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="$1.36/Liter" android:textColor="@color/white" android:textSize="12sp" android:textStyle="bold" />
-            </RelativeLayout>
-            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Subtotal Cargo:" android:textColor="@color/dark_on_surface_variant" android:textSize="12sp" />
-                <TextView android:id="@+id/tv_summary_subtotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="$34.00" android:textColor="@color/white" android:textSize="12sp" android:textStyle="bold" />
-            </RelativeLayout>
-            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Standard Transf. / Delivery Fee:" android:textColor="@color/dark_on_surface_variant" android:textSize="12sp" />
-                <TextView android:id="@+id/tv_summary_delivery_fee" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="$0.00\n(FREE)" android:gravity="end" android:textColor="@color/white" android:textSize="12sp" android:textStyle="bold" />
-            </RelativeLayout>
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dark_on_surface_variant" android:alpha="0.2" android:layout_marginVertical="12dp" />
-            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Estimated Total Receipt:" android:textStyle="bold" android:textColor="@color/white" />
-                <TextView android:id="@+id/tv_summary_total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="$34.00" android:textColor="@color/order_blue" android:textStyle="bold" android:textSize="16sp" />
-            </RelativeLayout>
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Request Fuel Delivery"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_dialog_station_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Station: BP Green Energy Hub"
+                android:textColor="@color/order_blue"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Fuel Type:"
+                android:textSize="12sp"
+                android:textColor="@color/dark_on_surface_variant"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_select_petrol"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="24dp"
+                    app:cardBackgroundColor="@color/dark_sheet_surface"
+                    app:strokeWidth="0dp"
+                    android:layout_marginEnd="8dp">
+                    <TextView
+                        android:id="@+id/tv_petrol_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:gravity="center"
+                        android:text="Petrol\n($1.42/L)"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_select_diesel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="24dp"
+                    app:cardBackgroundColor="@color/diesel_active"
+                    app:strokeWidth="0dp"
+                    android:layout_marginStart="8dp">
+                    <TextView
+                        android:id="@+id/tv_diesel_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:gravity="center"
+                        android:text="Diesel\n($1.36/L)"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Volume (Liters)"
+                android:textColorHint="@color/dark_on_surface_variant"
+                app:hintTextColor="@color/white"
+                app:boxStrokeColor="@color/white"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_volume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/white"
+                    android:text="25" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+                <Button android:id="@+id/btn_10l" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="10L" android:textColor="@color/white" app:strokeColor="@color/white" android:layout_marginEnd="4dp" />
+                <Button android:id="@+id/btn_20l" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="20L" android:textColor="@color/white" app:strokeColor="@color/white" android:layout_marginHorizontal="4dp" />
+                <Button android:id="@+id/btn_50l" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="50L" android:textColor="@color/white" app:strokeColor="@color/white" android:layout_marginHorizontal="4dp" />
+                <Button android:id="@+id/btn_100l" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="100L" android:textColor="@color/white" app:strokeColor="@color/white" android:layout_marginStart="4dp" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Name"
+                android:textColorHint="@color/dark_on_surface_variant"
+                app:hintTextColor="@color/white"
+                app:boxStrokeColor="@color/white"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Rohit Ranjan" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:textColorHint="@color/dark_on_surface_variant"
+                app:hintTextColor="@color/white"
+                app:boxStrokeColor="@color/white"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="+91 98765 43210" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Delivery Destination Address"
+                android:textColorHint="@color/dark_on_surface_variant"
+                app:hintTextColor="@color/white"
+                app:boxStrokeColor="@color/white"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="78 Kings Plaza, Sector 12, BLR" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Delivery Payment:"
+                android:textSize="12sp"
+                android:textColor="@color/dark_on_surface_variant"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_pay_cash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:strokeWidth="0dp"
+                    android:layout_marginEnd="8dp">
+                    <TextView
+                        android:id="@+id/tv_pay_cash_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:gravity="center"
+                        android:text="Cash on\nDelivery"
+                        android:textColor="@color/dark_sheet_bg"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_pay_wallet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/dark_sheet_surface"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/white"
+                    android:layout_marginStart="8dp">
+                    <TextView
+                        android:id="@+id/tv_pay_wallet_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:gravity="center"
+                        android:text="Digital Wallet"
+                        android:textColor="@color/dark_on_surface_variant"
+                        android:textSize="12sp" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#3A3A3C"
+                app:cardCornerRadius="12dp"
+                app:strokeWidth="0dp"
+                android:layout_marginBottom="24dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rate:" android:textColor="@color/dark_on_surface_variant" android:textSize="12sp" />
+                        <TextView android:id="@+id/tv_summary_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="$1.36/Liter" android:textColor="@color/white" android:textSize="12sp" android:textStyle="bold" />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Subtotal Cargo:" android:textColor="@color/dark_on_surface_variant" android:textSize="12sp" />
+                        <TextView android:id="@+id/tv_summary_subtotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="$34.00" android:textColor="@color/white" android:textSize="12sp" android:textStyle="bold" />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Standard Transf. / Delivery Fee:" android:textColor="@color/dark_on_surface_variant" android:textSize="12sp" />
+                        <TextView android:id="@+id/tv_summary_delivery_fee" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="$0.00\n(FREE)" android:gravity="end" android:textColor="@color/white" android:textSize="12sp" android:textStyle="bold" />
+                    </RelativeLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dark_on_surface_variant" android:alpha="0.2" android:layout_marginVertical="12dp" />
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Estimated Total Receipt:" android:textStyle="bold" android:textColor="@color/white" />
+                        <TextView android:id="@+id/tv_summary_total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="$34.00" android:textColor="@color/order_blue" android:textStyle="bold" android:textSize="16sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="24dp">
         <Button
             android:id="@+id/btn_cancel"
             style="@style/Widget.Material3.Button.TextButton"
