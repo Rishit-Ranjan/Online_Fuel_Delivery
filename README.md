@@ -1,15 +1,59 @@
-<!--suppress ALL, HtmlDeprecatedAttribute -->
-# Run and deploy the app
+# Online Fuel Delivery App
 
-This contains everything you need to run your app locally.
+A comprehensive Android application simulating a multi-role fuel delivery ecosystem. This project demonstrates modern Android development practices, including MVVM architecture, Room database integration, and a sleek Material 3 user interface.
 
-## Run Locally
+## 🚀 Key Features
 
-**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
+### 👤 User Workspace
+*   **Station Discovery**: Browse and compare nearby fuel stations with real-time distance and rating info.
+*   **Interactive Ordering**: A dark-themed, intuitive "Order Gas" dialog.
+    *   Select between **Petrol** and **Diesel**.
+    *   Real-time price calculation based on volume.
+    *   Quick-select volume presets (10L, 20L, 50L, 100L).
+    *   Support for multiple payment methods (Cash on Delivery, Digital Wallet).
+*   **Order Tracking**: View order history and current status.
 
+### 🛠️ Admin Workspace
+*   **Inventory Management**: Toggle "In Stock" or "Out of Stock" status for Petrol and Diesel at each station.
+*   **Rate Control**: Update fuel prices per liter in real-time, instantly affecting the User's view.
+*   **Station Management**: View and manage multiple station locations.
 
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Run the app on an emulator or physical device
+### 🚚 Driver Workspace (Simulated)
+*   **Delivery Flow**: Simulated workspace for managing active deliveries and order confirmation.
+
+## 🛠️ Tech Stack
+*   **Language**: Java
+*   **Architecture**: MVVM (Model-View-ViewModel) with Repository pattern.
+*   **Database**: [Room Persistence Library](https://developer.android.com/training/data-storage/room) for local data management.
+*   **UI Components**: Material 3, ViewBinding, BottomSheetDialogFragment, TabLayout.
+*   **Lifecycle**: LiveData & ViewModel for reactive UI updates.
+
+## 📸 Screenshots
+*(Add your screenshots here to showcase the sleek Dark UI and Role Switcher)*
+
+## 🚦 Getting Started
+
+### Prerequisites
+*   [Android Studio Ladybug](https://developer.android.com/studio) or newer.
+*   Android SDK 34+.
+
+### Setup Instructions
+1.  **Clone the Repository**:
+    ```bash
+    git clone https://github.com/your-repo/online-fuel-delivery.git
+    ```
+2.  **Open in Android Studio**:
+    *   Select **File > Open** and choose the project directory.
+    *   Wait for Gradle sync to complete.
+3.  **Configuration**:
+    *   Create a `.env` file in the root directory (refer to `.env.example`).
+    *   Add your `GEMINI_API_KEY` if utilizing the AI-assisted features.
+4.  **Run the App**:
+    *   Select an emulator or physical device.
+    *   Click the **Run** button (Shift + F10).
+
+## 🧪 Simulation Logic
+This app uses a built-in **Role Switcher** at the bottom of the screen. You can instantly toggle between **User**, **Admin**, and **Driver** modes to test the end-to-end delivery lifecycle without logging out.
+
+---
+*Developed as a demonstration of a scalable, interactive Android architecture.*
