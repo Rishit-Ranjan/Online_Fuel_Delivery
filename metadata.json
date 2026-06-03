@@ -1,0 +1,6 @@
+{
+  "name": "Online Fuel Delivery",
+  "description": "An automated offline-first food-delivery style fuel ordering system supporting Petrol & Diesel delivery with full Admin, User, and Driver modules, station comparison, and order cancellation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

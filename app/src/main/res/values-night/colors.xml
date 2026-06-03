@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="geo_primary">#D3E3FD</color>
+    <color name="geo_on_primary">#00325B</color>
+    <color name="geo_primary_container">#004884</color>
+    <color name="geo_on_primary_container">#D3E3FD</color>
+    <color name="geo_background">#111318</color>
+    <color name="geo_surface">#111318</color>
+    <color name="geo_surface_variant">#1A1C1E</color>
+    <color name="geo_on_surface">#E2E2E6</color>
+    <color name="geo_on_surface_variant">#C4C7CF</color>
+    <color name="geo_outline">#8E9199</color>
+
+    <color name="petrol_bg">#4A4458</color>
+    <color name="petrol_text">#EADDFF</color>
+    <color name="diesel_bg">#004884</color>
+    <color name="diesel_text">#D3E3FD</color>
+</resources>

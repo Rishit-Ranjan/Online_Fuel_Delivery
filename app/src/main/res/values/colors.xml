@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="geo_primary">#005FB0</color>
+    <color name="geo_on_primary">#FFFFFF</color>
+    <color name="geo_primary_container">#D3E3FD</color>
+    <color name="geo_on_primary_container">#001D35</color>
+    <color name="geo_background">#FEF7FF</color>
+    <color name="geo_surface">#FEF7FF</color>
+    <color name="geo_surface_variant">#F7F2FA</color>
+    <color name="geo_on_surface">#1D1B20</color>
+    <color name="geo_on_surface_variant">#49454F</color>
+    <color name="geo_outline">#CAC4D0</color>
+
+    <color name="dark_sheet_bg">#212126</color>
+    <color name="dark_sheet_surface">#2C2C2E</color>
+    <color name="dark_on_surface">#E1E1E1</color>
+    <color name="dark_on_surface_variant">#8E8E93</color>
+    <color name="order_blue">#0066CC</color>
+    <color name="diesel_active">#006064</color>
+
+    <color name="petrol_bg">#EADDFF</color>
+    <color name="petrol_text">#21005D</color>
+    <color name="diesel_bg">#D3E3FD</color>
+    <color name="diesel_text">#001D35</color>
+</resources>
