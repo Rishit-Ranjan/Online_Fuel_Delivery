@@ -1,6 +1,6 @@
 # Online Fuel Delivery App
 
-A comprehensive Android application simulating a multi-role fuel delivery ecosystem. This project demonstrates modern Android development practices, including MVVM architecture, Room database integration, and a sleek Material 3 user interface.
+A comprehensive Android application simulating a multirole fuel delivery ecosystem. This project demonstrates modern Android development practices, including MVVM architecture, Room database integration, and a sleek Material 3 user interface.
 
 ## 🚀 Key Features
 
