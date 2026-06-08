@@ -58,5 +58,3 @@ A comprehensive Android application simulating a multirole fuel delivery ecosyst
 ## 🧪 Simulation Logic
 This app uses a built-in **Role Switcher** at the bottom of the screen. You can instantly toggle between **User**, **Admin**, and **Driver** modes to test the end-to-end delivery lifecycle without logging out.
 
----
-*Developed as a demonstration of a scalable, interactive Android architecture.*
